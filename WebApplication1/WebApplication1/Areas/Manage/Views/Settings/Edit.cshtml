@@ -1,0 +1,32 @@
+﻿@using WebApplication1.Models;
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@model Settings
+<div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Edit</h4>
+
+            <form class="forms-sample" asp-action="Edit" asp-controller="Settings">
+                <div class="form-group">
+                    <label asp-for="Key"></label>
+                    <input asp-for="Key" type="text" class="form-control" id="exampleInputUsername1" placeholder="Key">
+                    <span asp-validation-for="Key"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Value"></label>
+                    <input asp-for="Value" type="text" class="form-control" id="exampleInputUsername1" placeholder="Value">
+                    <span asp-validation-for="Value"></span>
+                </div>
+
+               
+
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <button class="btn btn-light"><a asp-action="Index" asp-controller="Settings"></a>Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
