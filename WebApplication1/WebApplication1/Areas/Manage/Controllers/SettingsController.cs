@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.DAL;
 using WebApplication1.Models;
@@ -6,6 +7,7 @@ using WebApplication1.Models;
 namespace WebApplication1.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [Authorize]
     public class SettingsController : Controller
     {
         private readonly AppDbContext _context;
